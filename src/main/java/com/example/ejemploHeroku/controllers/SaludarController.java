@@ -31,6 +31,7 @@ public class SaludarController {
     public List<Persona> add(){
         Persona p=new Persona();
         p.setNombre(UUID.randomUUID().toString());
+        repo.save(p);
         return repo.findAll();
     }
 }
